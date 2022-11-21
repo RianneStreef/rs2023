@@ -4,24 +4,59 @@
 module.exports = {
   siteMetadata: {
     title: `rs2023`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.riannestreef.com`,
   },
-  plugins: [{
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      "trackingId": "G-SF8YF645KY"
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
+  plugins: [
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "G-SF8YF645KY",
+      },
     },
-    __key: "images"
-  }]
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.png",
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.png",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: "/",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve("./src/components/Layout.jsx"),
+      },
+    },
+  ],
 };

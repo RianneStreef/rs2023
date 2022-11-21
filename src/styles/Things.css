@@ -1,0 +1,64 @@
+.thing {
+  margin: 30px 0;
+}
+
+.thing-image {
+  display: none;
+}
+
+.thing-text-2 {
+  background-image: url(../images/projectPralyBackground.png);
+  background-size: contain;
+  padding: 30px;
+}
+.thing-text-1 {
+  background-image: url(../images/projectZenithBackground.png);
+  background-size: contain;
+  padding: 30px;
+}
+
+@media (min-width: 768px) {
+  .thing {
+    display: flex;
+    margin: 100px 0;
+  }
+
+  .thing-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .thing-image {
+    display: block;
+    width: 50%;
+    filter: grayscale(100%);
+    z-index: -6;
+  }
+
+  .thing-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .thing-text-1,
+  .thing-text-2 {
+    background-image: none;
+  }
+
+  .thing-text-reverse {
+    align-items: flex-start;
+  }
+
+  .thing-description {
+    background-color: var(--color-cards);
+    margin-left: -100px;
+    z-index: 50;
+    padding: 50px;
+  }
+
+  .thing-description-reverse {
+    margin-right: -100px;
+    margin-left: 0;
+  }
+}

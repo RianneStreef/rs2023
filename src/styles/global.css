@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url(../fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf)
+      format("truetype");
+}
+
+:root {
+  --color-highlight: #d31376;
+  --color-shadow: #eaeaea;
+  --color-text: #aeaeae;
+  --color-background: #1f1f1f;
+  --color-cards: #353535;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: all 500ms linear;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+h3 {
+  color: var(--color-highlight);
+  font-family: "Roboto";
+}
+
+h4 {
+  font-size: 22px;
+}
+
+p {
+  line-height: 25px;
+}
+
+a {
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.pink {
+  color: var(--color-highlight);
+}
+
+.white {
+  color: #fff;
+}
+
+.roboto {
+  font-family: "Roboto";
+}
+
+.mail-link-vertical {
+  color: var(--color-highlight);
+  writing-mode: vertical-rl;
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  font-family: "Roboto";
+}
+
+.line-image-vertical {
+  height: 100px;
+  margin: 20px 0 0 0;
+}
+
+.button {
+  border: 1px solid var(--color-highlight);
+  border-radius: 3px;
+  margin: 5px 0;
+  padding: 10px 20px;
+  width: fit-content;
+  font-family: "Roboto";
+  background-color: transparent;
+  color: var(--color-highlight);
+  font-size: 17px;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 0 150px;
+  }
+}

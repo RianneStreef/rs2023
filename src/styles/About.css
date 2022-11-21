@@ -1,0 +1,21 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills-lists {
+  display: flex;
+  flex-direction: row;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 5px 0;
+  width: 40vw;
+}
+
+.skills-list li {
+  padding: 5px 0;
+}

@@ -1,0 +1,27 @@
+.contact {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid var(--color-text);
+  width: 80vw;
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  input,
+  textarea {
+    width: 40vw;
+  }
+}
