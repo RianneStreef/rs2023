@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-links"></div>
       <p className="footer-text">
-        Designed & build by Rianne Streef<sup> © </sup>
+        Build by Rianne Streef<sup> © </sup>
       </p>
     </div>
   );
