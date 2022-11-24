@@ -128,6 +128,13 @@ a {
   background-color: transparent;
   color: var(--color-highlight);
   font-size: 17px;
+  transition: all 500ms linear;
+}
+
+.button:hover {
+  background-color: var(--color-highlight);
+  color: var(--color-background);
+  transition: all 500ms linear;
 }
 
 #nav {
