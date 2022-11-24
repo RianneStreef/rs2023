@@ -1,5 +1,5 @@
 .projects {
-  margin-top: 200px;
+  margin-top: 300px;
 }
 
 .project-cards {
@@ -38,11 +38,6 @@
 @media (min-width: 768px) {
   .project-card {
     width: 20vw;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .project-card:hover {
-    transition: transform 0.2s ease-in-out;
-    transform: scale(1.05);
+    opacity: 0;
   }
 }

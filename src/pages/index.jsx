@@ -22,13 +22,11 @@ const IndexPage = function (props) {
         <meta name="keywords" content="" />
         <link rel="canonical" href="" />
       </Helmet>
-      <Layout>
-        <Intro />
-        <About />
-        <Things />
-        <Projects />
-        <Contact />
-      </Layout>
+      <Intro />
+      <About />
+      <Things />
+      <Projects />
+      <Contact />
     </div>
   );
 };

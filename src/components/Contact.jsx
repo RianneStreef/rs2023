@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "../styles/Contact.css";
 
 const Contact = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", scrollImages);
+    let slideElementContact = document.getElementById("contact");
+
+    function scrollImages() {
+      let scrollY = window.innerHeight;
+      let positionElementContact = slideElementContact.getBoundingClientRect();
+
+      if (positionElementContact.y < scrollY - 100) {
+        slideElementContact.classList.add("slide-up");
+      }
+    }
+  }, []);
   return (
     <div className="contact" id="contact">
       <div className="header-placeholder" />
