@@ -77,9 +77,9 @@ const Projects = () => {
           </div>
           <h4>Claire Turner Design</h4>
           <p>
-            Children's illustrations, art classes and accessories. Site to show
-            available products, and to contact the artist for personalized
-            items, with web shop coming soon!
+            My personal logo designer! Site to show available products, and to
+            contact the artist for personalized items, with web shop coming
+            soon..
           </p>
           <p className="teck-list">Gatsby - Contentful</p>
         </div>

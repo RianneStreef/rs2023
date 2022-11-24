@@ -7,7 +7,10 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-links"></div>
       <p className="footer-text">
-        Build by Rianne Streef<sup> © </sup>
+        Build by Rianne Streef<sup> © </sup> - Logo design by{" "}
+        <a href="https://www.claireturner-design.com" target="_blank">
+          Claire Turner
+        </a>
       </p>
     </div>
   );
