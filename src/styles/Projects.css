@@ -37,7 +37,20 @@
 
 @media (min-width: 768px) {
   .project-card {
-    width: 20vw;
+    width: 30vw;
+    margin: 10px;
     opacity: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 1395px) {
+  .project-card {
+    width: 20vw;
   }
 }
