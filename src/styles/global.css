@@ -148,7 +148,7 @@ a {
 }
 
 .slide-up {
-  margin-top: 0 !important;
+  padding-top: 0 !important;
   transition: margin-top 400ms ease-out;
 }
 
@@ -157,6 +157,6 @@ a {
     padding: 0 150px;
   }
   .slide-up {
-    transition: margin-top 800ms ease-out;
+    transition: padding-top 800ms ease-out;
   }
 }

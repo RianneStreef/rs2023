@@ -8,6 +8,7 @@ import link from "../images/link.png";
 const Projects = () => {
   useEffect(() => {
     window.addEventListener("scroll", scrollImages);
+
     let projectCard1 = document.getElementById("project-card-1");
     let projectCard2 = document.getElementById("project-card-2");
     let projectCard3 = document.getElementById("project-card-3");
@@ -17,6 +18,15 @@ const Projects = () => {
 
     function scrollImages() {
       let scrollY = window.innerHeight;
+      let slideElementProjects = document.getElementById("projects");
+
+      let positionElementProjects =
+        slideElementProjects.getBoundingClientRect();
+
+      if (positionElementProjects.y < scrollY - 100) {
+        slideElementProjects.classList.add("slide-up");
+      }
+
       let positionProjectCard1 = projectCard1.getBoundingClientRect();
       let positionProjectCard2 = projectCard2.getBoundingClientRect();
       let positionProjectCard3 = projectCard3.getBoundingClientRect();
@@ -50,7 +60,7 @@ const Projects = () => {
     }
   }, []);
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <h3>Other interesting projects </h3>
       <div className="project-cards">
         <div className="project-card" id="project-card-1">

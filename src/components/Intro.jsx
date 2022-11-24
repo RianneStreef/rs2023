@@ -10,7 +10,7 @@ const Intro = () => {
 
     const timer = setTimeout(() => {
       slideElement1.classList.add("opaque");
-    }, 1000);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
