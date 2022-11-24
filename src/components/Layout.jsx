@@ -22,13 +22,28 @@ const Layout = ({ children }) => {
       <Header language={language} setLanguage={setLanguage} />
       <section className="main">{childrenWithProps}</section>
       <div className="social-link-vertical">
-        <a href="https://www.vts-webdesign.com" target="_blank">
+        <a
+          href="https://www.vts-webdesign.com"
+          target="_blank"
+          without
+          rel="noreferrer"
+        >
           <img className="social-link" src={house} alt="" />
         </a>
-        <a href="https://www.instagram.com/vtswebdesign/" target="_blank">
+        <a
+          href="https://www.instagram.com/vtswebdesign/"
+          target="_blank"
+          without
+          rel="noreferrer"
+        >
           <img className="social-link" src={insta} alt="" />
         </a>
-        <a href="https://www.github.com/RianneStreef" target="_blank">
+        <a
+          href="https://www.github.com/RianneStreef"
+          target="_blank"
+          without
+          rel="noreferrer"
+        >
           <img className="social-link" src={github} alt="" />
         </a>
         <img className="line-image-vertical" src={line} alt="" />

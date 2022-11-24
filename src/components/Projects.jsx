@@ -70,7 +70,12 @@ const Projects = () => {
               <a href="https://github.com/RianneStreef/ctd-v2">
                 <img src={github} alt="github-link" className="project-link" />
               </a>
-              <a href="https://www.claireturner-design.com" target="blank">
+              <a
+                href="https://www.claireturner-design.com"
+                target="blank"
+                without
+                rel="noreferrer"
+              >
                 <img src={link} alt="website-link" className="project-link" />
               </a>
             </div>
@@ -88,7 +93,12 @@ const Projects = () => {
           <div className="project-card-header">
             <img src={folder} alt="" className="project-icon" />
             <div className="project-links">
-              <a href="https://github.com/RianneStreef/zen-altitude">
+              <a
+                href="https://github.com/RianneStreef/zen-altitude"
+                target="blank"
+                without
+                rel="noreferrer"
+              >
                 <img src={github} alt="github-link" className="project-link" />
               </a>
               <a
@@ -111,10 +121,18 @@ const Projects = () => {
           <div className="project-card-header">
             <img src={folder} alt="" className="project-icon" />
             <div className="project-links">
-              <a href="https://github.com/RianneStreef/seb-gourmet-v2">
+              <a
+                href="https://github.com/RianneStreef/seb-gourmet-v2"
+                target="blank"
+                rel="noreferrer"
+              >
                 <img src={github} alt="github-link" className="project-link" />
               </a>
-              <a href="https://www.sebgourmet-traiteur.com" target="blank">
+              <a
+                href="https://www.sebgourmet-traiteur.com"
+                target="blank"
+                rel="noreferrer"
+              >
                 <img src={link} alt="website-link" className="project-link" />
               </a>
             </div>
@@ -130,10 +148,18 @@ const Projects = () => {
           <div className="project-card-header">
             <img src={folder} alt="" className="project-icon" />
             <div className="project-links">
-              <a href="https://github.com/RianneStreef/rendez-vous">
+              <a
+                href="https://github.com/RianneStreef/rendez-vous"
+                target="blank"
+                rel="noreferrer"
+              >
                 <img src={github} alt="github-link" className="project-link" />
               </a>
-              <a href="https://www.lerendezvousvalthorens.com" target="blank">
+              <a
+                href="https://www.lerendezvousvalthorens.com"
+                target="blank"
+                rel="noreferrer"
+              >
                 <img src={link} alt="website-link" className="project-link" />
               </a>
             </div>
@@ -151,10 +177,14 @@ const Projects = () => {
           <div className="project-card-header">
             <img src={folder} alt="" className="project-icon" />
             <div className="project-links">
-              <a href="https://github.com/RianneStreef/core-move-v2">
+              <a
+                href="https://github.com/RianneStreef/core-move-v2"
+                target="blank"
+                rel="noreferrer"
+              >
                 <img src={github} alt="github-link" className="project-link" />
               </a>
-              <a href="https://www.coremove.nl" target="blank">
+              <a href="https://www.coremove.nl" target="blank" rel="noreferrer">
                 <img src={link} alt="website-link" className="project-link" />
               </a>
             </div>
@@ -171,10 +201,18 @@ const Projects = () => {
           <div className="project-card-header">
             <img src={folder} alt="" className="project-icon" />
             <div className="project-links">
-              <a href="https://github.com/RianneStreef/vts2022">
+              <a
+                href="https://github.com/RianneStreef/vts2022"
+                target="blank"
+                rel="noreferrer"
+              >
                 <img src={github} alt="github-link" className="project-link" />
               </a>
-              <a href="https://www.vts-webdesign.com" target="blank">
+              <a
+                href="https://www.vts-webdesign.com"
+                target="blank"
+                rel="noreferrer"
+              >
                 <img src={link} alt="website-link" className="project-link" />
               </a>
             </div>

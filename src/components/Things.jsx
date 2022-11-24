@@ -46,11 +46,21 @@ const Things = () => {
           <p className="teck-list">Gatsby - React - JavaScript</p>
 
           <div className="project-links">
-            <a href="https://github.com/RianneStreef/zenith-v1-2">
+            <a
+              href="https://github.com/RianneStreef/zenith-v1-2"
+              target="blank"
+              rel="noreferrer"
+            >
               <img src={github} alt="github-link" className="project-link" />
             </a>
-            <img src={link} alt="website-link" className="project-link" />
-            <a href="https://www.zenith-skishop.com" target="blank"></a>
+
+            <a
+              href="https://www.zenith-skishop.com"
+              target="blank"
+              rel="noreferrer"
+            >
+              <img src={link} alt="website-link" className="project-link" />
+            </a>
           </div>
         </div>
       </div>
@@ -75,10 +85,18 @@ const Things = () => {
           <p className="teck-list">Gatsby - Contentful - Smoobu</p>
 
           <div className="project-links">
-            <a href="https://github.com/RianneStreef/praly-v2">
+            <a
+              href="https://github.com/RianneStreef/praly-v2"
+              target="blank"
+              rel="noreferrer"
+            >
               <img src={github} alt="github-link" className="project-link" />
             </a>
-            <a href="https://www.leslodgesdepraly.fr" target="blank">
+            <a
+              href="https://www.leslodgesdepraly.fr"
+              target="blank"
+              rel="noreferrer"
+            >
               <img src={link} alt="website-link" className="project-link" />
             </a>
           </div>
