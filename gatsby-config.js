@@ -8,9 +8,14 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-SF8YF645KY",
+        trackingIds: ["G-SF8YF645KY"],
+        pluginConfig: {
+          head: true,
+        },
+        enableWebVitalsTracking: true,
+        respectDNT: true,
       },
     },
     "gatsby-plugin-image",
