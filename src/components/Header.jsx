@@ -2,10 +2,18 @@ import React, { useEffect } from "react";
 import { Link } from "gatsby";
 
 import "../styles/Header.css";
+import { content } from "../content/languages";
 
 import logo from "../images/icon.png";
 
-const Header = () => {
+const Header = (props) => {
+  let languageToUse = "";
+  let { language } = props;
+
+  language === "french"
+    ? (languageToUse = content.french)
+    : (languageToUse = content.english);
+
   useEffect(() => {
     const nav = document.getElementById("nav");
     const scrollUp = "scroll-up";
@@ -13,8 +21,6 @@ const Header = () => {
     let lastScroll = 0;
     let currentScroll = 0;
 
-    console.log(currentScroll);
-    console.log("currentScroll");
     window.addEventListener("scroll", () => {
       currentScroll = window.pageYOffset;
       if (currentScroll <= 100) {
@@ -42,13 +48,13 @@ const Header = () => {
       <div className="nav-bar">
         <ul className="nav-links">
           <li className="nav-link">
-            <Link to="/#about"> 01. About</Link>
+            <Link to="/#about"> {languageToUse.about}</Link>
           </li>
           <li className="nav-link">
-            <Link to="/#things"> 02. Work</Link>
+            <Link to="/#things"> {languageToUse.work}</Link>
           </li>
           <li className="nav-link">
-            <Link to="/#contact"> 03. Contact</Link>
+            <Link to="/#contact"> {languageToUse.contact}</Link>
           </li>
         </ul>
       </div>

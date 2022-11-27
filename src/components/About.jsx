@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 
 import "../styles/About.css";
 
-const About = () => {
+const About = (props) => {
+  let { language, languageToUse } = props;
+
   useEffect(() => {
     window.addEventListener("scroll", scrollImages);
     let slideElementAbout = document.getElementById("about");
@@ -19,19 +21,19 @@ const About = () => {
   return (
     <div className="about" id="about">
       <div className="header-placeholder" />
-      <h3>01. About Me</h3>
+      <h3>{languageToUse.aboutTitle}</h3>
       <p>
-        Hello! My name is <span className="pink"> Rianne </span>and I like
-        writing codes and solving problems.
+        {languageToUse.about1} <span className="pink"> Rianne </span>
+        {languageToUse.about2}
       </p>
       <p>
-        I started coding in the first lock down, starting out with HTML and CSS.
-        Soon after I decided to do a course on{" "}
-        <span className="pink">web development</span>. Now, I create websites as
-        a <span className="pink">freelancer</span>, and eager to learn loads
-        more!
+        {languageToUse.about3}
+        <span className="pink"> {languageToUse.about4}</span>
+        {languageToUse.about5}
+        <span className="pink"> {languageToUse.about6}</span>
+        {languageToUse.about7}
       </p>
-      <p>The main technologies I work with:</p>
+      <p>{languageToUse.about8}</p>
       <div className="skills-lists">
         <ul className="skills-list">
           <li>&#10003; JavaScript</li>

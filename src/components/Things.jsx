@@ -8,7 +8,9 @@ import thing2 from "../images/projectPraly.jpg";
 import github from "../images/github.png";
 import link from "../images/link.png";
 
-const Things = () => {
+const Things = (props) => {
+  let { language, languageToUse } = props;
+
   useEffect(() => {
     window.addEventListener("scroll", scrollImages);
     let slideElement3 = document.getElementById("things");
@@ -25,7 +27,7 @@ const Things = () => {
   return (
     <div className="things" id="things">
       <div className="header-placeholder" />
-      <h3>02. Some cool things I've made</h3>
+      <h3>{languageToUse.thingsTitle}</h3>
       <div className="thing">
         <img
           src={thing1}
@@ -33,15 +35,11 @@ const Things = () => {
           alt="website Zenith Ski Shop"
         />
         <div className="thing-text thing-text-1">
-          <p>Featured project</p>
+          <p>{languageToUse.featuredProject}</p>
           <h4>Zenith Ski Shop</h4>
 
           <div className="thing-description">
-            <p>
-              A website for a ski shop located in Val Thorens. The site shows
-              all the necessary information and has a reservation system linked
-              to it.
-            </p>
+            <p>{languageToUse.featuredProject1Description}</p>
           </div>
           <p className="teck-list">Gatsby - React - JavaScript</p>
 
@@ -71,16 +69,11 @@ const Things = () => {
           className="thing-image"
         />
         <div className="thing-text-reverse thing-text-2">
-          <p>Featured project</p>
+          <p>{languageToUse.featuredProject}</p>
           <h4>Les Lodges de Praly</h4>
 
           <div className="thing-description thing-description-reverse">
-            <p>
-              A website for a Bed & Breakfast located in Les
-              Ollières-sur-Eyrieux , France. The site shows information on all
-              the available lodgings and reservations can be made on the
-              website.
-            </p>
+            <p>{languageToUse.featuredProject2Description}</p>
           </div>
           <p className="teck-list">Gatsby - Contentful - Smoobu</p>
 

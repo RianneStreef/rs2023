@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 
 import "../styles/Contact.css";
 
-const Contact = () => {
+const Contact = (props) => {
+  let { language, languageToUse } = props;
+
   useEffect(() => {
     window.addEventListener("scroll", scrollImages);
     let slideElementContact = document.getElementById("contact");
@@ -20,7 +22,7 @@ const Contact = () => {
     <div className="contact" id="contact">
       <div className="header-placeholder" />
 
-      <h3>04. Let's talk!</h3>
+      <h3>{languageToUse.contactTitle}</h3>
 
       <div className="form-container">
         <form
@@ -44,7 +46,7 @@ const Contact = () => {
           </p>
           <input type="hidden" name="form-name" value="contact" />
           <p className="form-items">
-            <label htmlFor="name">Name:</label> <br />
+            <label htmlFor="name">{languageToUse.name}</label> <br />
             <input
               className="input"
               type="text"
@@ -54,7 +56,7 @@ const Contact = () => {
             />
           </p>
           <p className="form-items">
-            <label htmlFor="email">Email:</label> <br />
+            <label htmlFor="email">{languageToUse.email}</label> <br />
             <input
               className="input"
               type="email"
@@ -64,12 +66,12 @@ const Contact = () => {
             />
           </p>
           <p className="form-items">
-            <label htmlFor="message">Message:</label> <br />
+            <label htmlFor="message">{languageToUse.message}</label> <br />
             <textarea id="message" name="message" rows="8" required></textarea>
           </p>
           <div className="center-button-container">
             <button className="button" type="submit" value="Submit message">
-              Send
+              {languageToUse.send}
             </button>
           </div>
         </form>

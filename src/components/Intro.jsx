@@ -4,7 +4,9 @@ import "../styles/Intro.css";
 
 import { Link } from "gatsby";
 
-const Intro = () => {
+const Intro = (props) => {
+  let { language, languageToUse } = props;
+
   useEffect(() => {
     let slideElement1 = document.getElementById("slide-element-1");
 
@@ -17,22 +19,20 @@ const Intro = () => {
   return (
     <div className="intro" id="slide-element-1">
       <div className="header-placeholder" />
-      <p className="roboto">Hi! My name is</p>
+      <p className="roboto">{languageToUse.intro1}</p>
       <h2 className="white">Rianne Streef.</h2>
-      <h1>I build things for the web.</h1>
+      <h1>{languageToUse.intro2}</h1>
       <p>
-        I'm Rianne, a freelance web developer from Val Thorens and I create{" "}
-        <span className="pink">
-          responsive websites and mobile applications.{" "}
-        </span>
-        I like development, tech, and unicorns.
+        {languageToUse.intro3}
+        <span className="pink">{languageToUse.intro4}</span>
+        {languageToUse.intro5}
       </p>
       <div className="action-buttons">
         <Link to="#things" className="button">
-          Check out my projects
+          {languageToUse.intro6}
         </Link>
         <Link to="#contact" className="button">
-          Let's talk!
+          {languageToUse.intro7}
         </Link>
       </div>
     </div>

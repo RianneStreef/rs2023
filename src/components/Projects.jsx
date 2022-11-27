@@ -5,7 +5,9 @@ import folder from "../images/folder.png";
 import github from "../images/github.png";
 import link from "../images/link.png";
 
-const Projects = () => {
+const Projects = (props) => {
+  let { language, languageToUse } = props;
+
   useEffect(() => {
     window.addEventListener("scroll", scrollImages);
 
@@ -61,7 +63,7 @@ const Projects = () => {
   }, []);
   return (
     <div className="projects" id="projects">
-      <h3>Other interesting projects </h3>
+      <h3>{languageToUse.projectsTitle}</h3>
       <div className="project-cards">
         <div className="project-card" id="project-card-1">
           <div className="project-card-header">
@@ -81,11 +83,7 @@ const Projects = () => {
             </div>
           </div>
           <h4>Claire Turner Design</h4>
-          <p>
-            My personal logo designer! Site to show available products, and to
-            contact the artist for personalized items, with web shop coming
-            soon..
-          </p>
+          <p>{languageToUse.project1Description}</p>
           <p className="teck-list">Gatsby - Contentful</p>
         </div>
 
@@ -110,11 +108,7 @@ const Projects = () => {
             </div>
           </div>
           <h4>Zen Altitude</h4>
-          <p>
-            Massage therapist that offers massages, facial and leg treatments at
-            home or in her treatment cabin in Val Thorens. Information and
-            prices of all treatments are online.
-          </p>
+          <p>{languageToUse.project2Description}</p>
           <p>Gatsby - React - Javascript</p>
         </div>
         <div className="project-card" id="project-card-3">
@@ -138,10 +132,8 @@ const Projects = () => {
             </div>
           </div>
           <h4>Seb Gourmet</h4>
-          <p>
-            Catereer that uses the website for information about his products
-            and easy ways to contact them.
-          </p>
+          <p>{languageToUse.project3Description}</p>
+
           <p>Gatsby - React - Javascript</p>
         </div>
         <div className="project-card" id="project-card-4">
@@ -166,11 +158,8 @@ const Projects = () => {
           </div>
 
           <h4>Restaurant le Rendez Vous</h4>
-          <p>
-            General information of the restaurant, the menu, and contact
-            information can be found on this website. Additionally there are QR
-            codes that link to a mobile verion of the restaurant and bar menus.
-          </p>
+          <p>{languageToUse.project4Description}</p>
+
           <p>Gatsby - React - Javascript</p>
         </div>
         <div className="project-card" id="project-card-5">
@@ -190,11 +179,8 @@ const Projects = () => {
             </div>
           </div>
           <h4>Core Move</h4>
-          <p>
-            Physical therapist specialized in core strenght, moms and work
-            posture. Information about these specialities and prices can be
-            found on this website.
-          </p>
+          <p>{languageToUse.project5Description}</p>
+
           <p>Gatsby - React - Javascript</p>
         </div>
         <div className="project-card" id="project-card-6">
@@ -218,10 +204,8 @@ const Projects = () => {
             </div>
           </div>
           <h4>VTS Web design</h4>
-          <p>
-            Information about my collaboration with graphic designer Xavier
-            Diaz!
-          </p>
+          <p>{languageToUse.project6Description}</p>
+
           <p>Gatsby - React - Javascript</p>
         </div>
       </div>
