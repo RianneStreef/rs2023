@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -48,7 +49,13 @@ const Layout = ({ children }) => {
         </a>
         <img className="line-image-vertical" src={line} alt="" />
       </div>
-
+      <div className="language">
+        {language === "english" ? (
+          <Link to="/fr">FR</Link>
+        ) : (
+          <Link to="/">EN</Link>
+        )}
+      </div>
       <a className="mail-link-vertical" href="mailto:contact@riannestreef.com">
         contact@riannestreef.com{" "}
         <img className="line-image-vertical" src={line} alt="" />

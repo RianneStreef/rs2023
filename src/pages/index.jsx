@@ -17,6 +17,8 @@ const IndexPage = function (props) {
   let languageToUse = content.english;
 
   useEffect(() => {
+    setLanguage("english");
+
     console.log(window.navigator.language);
     if (window.navigator.language === "fr") {
       setLanguage("french");

@@ -137,6 +137,13 @@ a {
   transition: all 500ms linear;
 }
 
+.language a {
+  color: var(--color-highlight);
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+}
+
 #nav {
   transition: transform 0.4s;
 }
