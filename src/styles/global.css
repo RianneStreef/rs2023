@@ -166,6 +166,20 @@ a {
   transition: margin-top 400ms ease-out;
 }
 
+.pop-up-french {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1f1f1f;
+}
+
 @media (min-width: 1024px) {
   .main {
     padding: 0 150px;
