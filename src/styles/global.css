@@ -180,6 +180,10 @@ a {
   background-color: #1f1f1f;
 }
 
+.pop-up-french p {
+  text-align: center;
+}
+
 @media (min-width: 1024px) {
   .main {
     padding: 0 150px;
