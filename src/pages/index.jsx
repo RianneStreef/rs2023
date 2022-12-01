@@ -32,22 +32,27 @@ const IndexPage = function (props) {
     }
   });
 
-  var requestOptions = {
-    method: "GET",
-  };
+  let frenchOption = localStorage.getItem("french");
+  console.log(frenchOption);
 
-  fetch(
-    "https://api.geoapify.com/v1/ipinfo?&apiKey=fc83c402de874a349d862264c7e3701a",
-    requestOptions
-  )
-    .then((response) => response.json())
-    .then((result) => (countryCode = result.country.iso_code))
-    .then((result) => {
-      if (countryCode === "FR") {
-        proposeFR();
-      }
-    })
-    .catch((error) => console.log("error", error));
+  if (frenchOption === null) {
+    var requestOptions = {
+      method: "GET",
+    };
+
+    fetch(
+      "https://api.geoapify.com/v1/ipinfo?&apiKey=fc83c402de874a349d862264c7e3701a",
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => (countryCode = result.country.iso_code))
+      .then((result) => {
+        if (countryCode === "FR") {
+          proposeFR();
+        }
+      })
+      .catch((error) => console.log("error", error));
+  }
 
   function proposeFR() {
     setPopUpFR(true);
@@ -57,11 +62,13 @@ const IndexPage = function (props) {
   function acceptFR() {
     setPopUpFR(false);
     setFirstRender(false);
+    localStorage.setItem("french", "oui");
   }
 
   function rejectFR() {
     setPopUpFR(false);
     setFirstRender(false);
+    localStorage.setItem("french", "no");
   }
 
   return (
