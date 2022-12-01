@@ -11,7 +11,7 @@ export const french = {
   contact: "03. Contact",
 
   intro1: "Hi! Mon nom est",
-  intro2: "Je crée des trucs pour le web.",
+  intro2: "Je crée des choses pour le web.",
   intro3: "Je suis Rianne, développeuse freelance de Val Thorens et je crée ",
   intro4: " des sites responsive et des applications mobile. ",
   intro5: "J'aime le développement, la technologie et les licornes.",
