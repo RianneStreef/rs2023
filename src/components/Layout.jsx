@@ -12,6 +12,10 @@ import line from "../images/line-vertical.png";
 const Layout = ({ children }) => {
   let [language, setLanguage] = useState("english");
 
+  function storageEN() {
+    sessionStorage.setItem("language", "english");
+  }
+
   const childrenWithProps = React.Children.map(children, (child) =>
     React.cloneElement(child, {
       language,
@@ -50,7 +54,9 @@ const Layout = ({ children }) => {
         {language === "english" ? (
           <Link to="/fr">FR</Link>
         ) : (
-          <Link to="/">EN</Link>
+          <Link to="/" onClick={() => storageEN()}>
+            EN
+          </Link>
         )}
       </div>
       <a className="mail-link-vertical" href="mailto:contact@riannestreef.com">

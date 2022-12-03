@@ -77,6 +77,8 @@ const IndexPage = function (props) {
   function rejectFR() {
     setPopUpFR(false);
     setFirstRender(false);
+    setLanguage("english");
+
     sessionStorage.setItem("firstRender", "false");
     sessionStorage.setItem("language", "english");
   }
