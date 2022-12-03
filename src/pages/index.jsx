@@ -31,9 +31,6 @@ const IndexPage = function (props) {
     }
 
     let languageInStorage = sessionStorage.getItem("language");
-    let renderInStorage = sessionStorage.getItem("firstRender");
-    console.log("firstRender");
-    console.log(firstRender);
 
     if (languageInStorage === "french") {
       setLanguage("french");
@@ -41,6 +38,10 @@ const IndexPage = function (props) {
     }
 
     function proposeFR() {
+      console.log("firstRender");
+      console.log(firstRender);
+      let renderInStorage = sessionStorage.getItem("firstRender");
+
       if (renderInStorage !== false) {
         setPopUpFR(true);
       }
