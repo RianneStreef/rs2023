@@ -69,7 +69,7 @@ const IndexPage = function (props) {
   function acceptFR() {
     setPopUpFR(false);
     setFirstRender(false);
-    sessionStorage.setItem("firstRender", "false");
+    sessionStorage.setItem("firstRender", false);
     setLanguage("french");
     sessionStorage.setItem("language", "french");
   }
@@ -79,7 +79,7 @@ const IndexPage = function (props) {
     setFirstRender(false);
     setLanguage("english");
 
-    sessionStorage.setItem("firstRender", "false");
+    sessionStorage.setItem("firstRender", false);
     sessionStorage.setItem("language", "english");
   }
 
