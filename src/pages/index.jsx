@@ -21,21 +21,46 @@ const IndexPage = function (props) {
 
   const [popUpFR, setPopUpFR] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
+  const [frenchOption, setFrenchOption] = useState();
+
+  function proposeFR() {
+    setPopUpFR(true);
+  }
+
+  function acceptFR() {
+    setPopUpFR(false);
+    setFrenchOption(true);
+    setFirstRender(false);
+    console.log(firstRender);
+    console.log(frenchOption);
+    localStorage.setItem("frenchOption", frenchOption);
+  }
+
+  function rejectFR() {
+    setPopUpFR(false);
+    setFrenchOption(false);
+    setFirstRender(false);
+    localStorage.setItem("frenchOption", frenchOption);
+  }
+
+  setLanguage("english");
 
   useEffect(() => {
-    setLanguage("english");
+    let frenchOptionInStorage = localStorage.getItem("frenchOption");
+    console.log(frenchOptionInStorage);
+
+    if (frenchOptionInStorage !== null) {
+      setFrenchOption(frenchOptionInStorage);
+    }
 
     console.log(window.navigator.language);
     if (window.navigator.language === "fr") {
       setLanguage("french");
       window.location.href = "./fr/";
     }
-  });
+  }, [setFrenchOption, setLanguage]);
 
-  let frenchOption = localStorage.getItem("french");
-  console.log(frenchOption);
-
-  if (frenchOption === null) {
+  if (firstRender === true) {
     var requestOptions = {
       method: "GET",
     };
@@ -52,23 +77,6 @@ const IndexPage = function (props) {
         }
       })
       .catch((error) => console.log("error", error));
-  }
-
-  function proposeFR() {
-    setPopUpFR(true);
-    console.log("propose FR");
-  }
-
-  function acceptFR() {
-    setPopUpFR(false);
-    setFirstRender(false);
-    localStorage.setItem("french", "oui");
-  }
-
-  function rejectFR() {
-    setPopUpFR(false);
-    setFirstRender(false);
-    localStorage.setItem("french", "no");
   }
 
   return (
