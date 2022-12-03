@@ -38,9 +38,9 @@ const IndexPage = function (props) {
     }
 
     function proposeFR() {
+      let renderInStorage = sessionStorage.getItem("firstRender");
       console.log("firstRender");
       console.log(firstRender);
-      let renderInStorage = sessionStorage.getItem("firstRender");
 
       if (renderInStorage !== false) {
         setPopUpFR(true);
