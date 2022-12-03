@@ -32,6 +32,8 @@ const IndexPage = function (props) {
 
     let languageInStorage = sessionStorage.getItem("language");
     let renderInStorage = sessionStorage.getItem("firstRender");
+    console.log("renderInStorage");
+    console.log(renderInStorage);
 
     if (renderInStorage === false) setFirstRender(renderInStorage);
 
