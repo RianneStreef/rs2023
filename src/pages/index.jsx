@@ -30,9 +30,14 @@ const IndexPage = function (props) {
       window.location.href = "./fr/";
     }
 
-    let languageInStorage = localStorage.getItem("language");
+    let languageInStorage = sessionStorage.getItem("language");
     console.log("languageInStorage");
     console.log(languageInStorage);
+
+    if (languageInStorage === "french") {
+      setLanguage("french");
+      window.location.href = "./fr/";
+    }
 
     function proposeFR() {
       setPopUpFR(true);
@@ -63,7 +68,7 @@ const IndexPage = function (props) {
     setFirstRender(false);
     setLanguage("french");
 
-    localStorage.setItem("language", "french");
+    sessionStorage.setItem("language", "french");
     console.log("firstRender");
     console.log(firstRender);
   }
@@ -71,7 +76,7 @@ const IndexPage = function (props) {
   function rejectFR() {
     setPopUpFR(false);
     setFirstRender(false);
-    localStorage.setItem("language", "english");
+    sessionStorage.setItem("language", "english");
 
     console.log("firstRender");
     console.log(firstRender);
