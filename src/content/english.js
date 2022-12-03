@@ -63,7 +63,7 @@ export const english = {
   thanks: "Thank you for your message!",
 
   copyright: "Build by",
-  logo: "Logo by",
+  logo: "Logo by ",
 
   mentionsLegal: "Disclaimer",
 };

@@ -21,7 +21,6 @@ const Footer = (props) => {
         <a
           href="https://www.claireturner-design.com"
           target="_blank"
-          without
           rel="noreferrer"
         >
           Claire Turner

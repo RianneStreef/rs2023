@@ -75,7 +75,6 @@ const Projects = (props) => {
               <a
                 href="https://www.claireturner-design.com"
                 target="blank"
-                without
                 rel="noreferrer"
               >
                 <img src={link} alt="website-link" className="project-link" />
@@ -94,7 +93,6 @@ const Projects = (props) => {
               <a
                 href="https://github.com/RianneStreef/zen-altitude"
                 target="blank"
-                without
                 rel="noreferrer"
               >
                 <img src={github} alt="github-link" className="project-link" />

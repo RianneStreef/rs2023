@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
         <a
           href="https://www.vts-webdesign.com"
           target="_blank"
-          without
           rel="noreferrer"
         >
           <img className="social-link" src={house} alt="" />
@@ -34,7 +33,6 @@ const Layout = ({ children }) => {
         <a
           href="https://www.instagram.com/vtswebdesign/"
           target="_blank"
-          without
           rel="noreferrer"
         >
           <img className="social-link" src={insta} alt="" />
@@ -42,7 +40,6 @@ const Layout = ({ children }) => {
         <a
           href="https://www.github.com/RianneStreef"
           target="_blank"
-          without
           rel="noreferrer"
         >
           <img className="social-link" src={github} alt="" />

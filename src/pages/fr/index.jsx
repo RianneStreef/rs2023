@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import "../../styles/global.css";
@@ -14,8 +14,11 @@ import Contact from "../../components/Contact";
 
 const IndexPage = function (props) {
   let { language, setLanguage } = props;
-  setLanguage("french");
   let languageToUse = content.french;
+
+  useEffect(() => {
+    setLanguage("french");
+  });
 
   return (
     <div>

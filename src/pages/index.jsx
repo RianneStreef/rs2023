@@ -21,62 +21,60 @@ const IndexPage = function (props) {
 
   const [popUpFR, setPopUpFR] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
-  const [frenchOption, setFrenchOption] = useState();
-
-  function proposeFR() {
-    setPopUpFR(true);
-  }
-
-  function acceptFR() {
-    setPopUpFR(false);
-    setFrenchOption(true);
-    setFirstRender(false);
-    console.log(firstRender);
-    console.log(frenchOption);
-    localStorage.setItem("frenchOption", frenchOption);
-  }
-
-  function rejectFR() {
-    setPopUpFR(false);
-    setFrenchOption(false);
-    setFirstRender(false);
-    localStorage.setItem("frenchOption", frenchOption);
-  }
-
-  setLanguage("english");
 
   useEffect(() => {
-    let frenchOptionInStorage = localStorage.getItem("frenchOption");
-    console.log(frenchOptionInStorage);
+    setLanguage("english");
 
-    if (frenchOptionInStorage !== null) {
-      setFrenchOption(frenchOptionInStorage);
-    }
-
-    console.log(window.navigator.language);
     if (window.navigator.language === "fr") {
       setLanguage("french");
       window.location.href = "./fr/";
     }
-  }, [setFrenchOption, setLanguage]);
 
-  if (firstRender === true) {
-    var requestOptions = {
-      method: "GET",
-    };
+    let languageInStorage = localStorage.getItem("language");
+    console.log("languageInStorage");
+    console.log(languageInStorage);
 
-    fetch(
-      "https://api.geoapify.com/v1/ipinfo?&apiKey=fc83c402de874a349d862264c7e3701a",
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) => (countryCode = result.country.iso_code))
-      .then((result) => {
-        if (countryCode === "FR") {
-          proposeFR();
-        }
-      })
-      .catch((error) => console.log("error", error));
+    function proposeFR() {
+      setPopUpFR(true);
+    }
+
+    if (firstRender === true) {
+      var requestOptions = {
+        method: "GET",
+      };
+
+      fetch(
+        "https://api.geoapify.com/v1/ipinfo?&apiKey=fc83c402de874a349d862264c7e3701a",
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => (countryCode = result.country.iso_code))
+        .then((result) => {
+          if (countryCode === "FR") {
+            proposeFR();
+          }
+        })
+        .catch((error) => console.log("error", error));
+    }
+  }, []);
+
+  function acceptFR() {
+    setPopUpFR(false);
+    setFirstRender(false);
+    setLanguage("french");
+
+    localStorage.setItem("language", "french");
+    console.log("firstRender");
+    console.log(firstRender);
+  }
+
+  function rejectFR() {
+    setPopUpFR(false);
+    setFirstRender(false);
+    localStorage.setItem("language", "english");
+
+    console.log("firstRender");
+    console.log(firstRender);
   }
 
   return (
