@@ -16,6 +16,10 @@ const Layout = ({ children }) => {
     sessionStorage.setItem("language", "english");
   }
 
+  function storageFR() {
+    sessionStorage.setItem("language", "french");
+  }
+
   const childrenWithProps = React.Children.map(children, (child) =>
     React.cloneElement(child, {
       language,
@@ -52,7 +56,9 @@ const Layout = ({ children }) => {
       </div>
       <div className="language">
         {language === "english" ? (
-          <Link to="/fr">FR</Link>
+          <Link to="/fr" onClick={() => storageFR()}>
+            FR
+          </Link>
         ) : (
           <Link to="/" onClick={() => storageEN()}>
             EN
