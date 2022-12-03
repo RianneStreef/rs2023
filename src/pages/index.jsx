@@ -39,6 +39,9 @@ const IndexPage = function (props) {
 
     function proposeFR() {
       let renderInStorage = sessionStorage.getItem("firstRender");
+
+      setFirstRender(renderInStorage);
+
       console.log("firstRender");
       console.log(firstRender);
 
