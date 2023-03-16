@@ -1,8 +1,8 @@
 {
-  "name": "rs2023",
+  "name": "rs2023-v2",
   "version": "1.0.0",
   "private": true,
-  "description": "rs2023",
+  "description": "rs2023-v2",
   "author": "Rianne Streef",
   "keywords": [
     "gatsby"
@@ -15,23 +15,22 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "axios": "^1.2.0",
-    "gatsby": "^5.0.0",
-    "gatsby-plugin-google-analytics": "^5.0.0",
-    "gatsby-plugin-google-gtag": "^5.1.0",
-    "gatsby-plugin-image": "^3.0.0",
-    "gatsby-plugin-layout": "^4.0.0",
-    "gatsby-plugin-manifest": "^5.0.0",
-    "gatsby-plugin-react-helmet": "^6.0.0",
-    "gatsby-plugin-sharp": "^5.0.0",
-    "gatsby-plugin-sitemap": "^6.0.0",
-    "gatsby-source-filesystem": "^5.0.0",
-    "gatsby-transformer-sharp": "^5.0.0",
+    "@mdx-js/react": "^2.3.0",
+    "@paypal/react-paypal-js": "^7.8.2",
+    "gatsby": "^5.7.0",
+    "gatsby-plugin-gdpr-cookies": "^2.0.9",
+    "gatsby-plugin-google-gtag": "^5.7.0",
+    "gatsby-plugin-image": "^3.7.0",
+    "gatsby-plugin-layout": "^4.7.0",
+    "gatsby-plugin-manifest": "^5.7.0",
+    "gatsby-plugin-mdx": "^5.7.0",
+    "gatsby-plugin-react-helmet": "^6.7.0",
+    "gatsby-plugin-sharp": "^5.7.0",
+    "gatsby-plugin-sitemap": "^6.7.0",
+    "gatsby-source-filesystem": "^5.7.0",
+    "gatsby-transformer-sharp": "^5.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0"
-  },
-  "engines": {
-    "node": ">=19.1.0"
   }
 }

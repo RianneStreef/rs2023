@@ -17,13 +17,13 @@ import Contact from "../components/Contact";
 const IndexPage = function (props) {
   let { language, setLanguage } = props;
   let languageToUse = content.english;
-  let countryCode = "";
 
   const [popUpFR, setPopUpFR] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
 
   useEffect(() => {
     setLanguage("english");
+    let countryCode = "";
 
     if (window.navigator.language === "fr") {
       setLanguage("french");
@@ -32,13 +32,8 @@ const IndexPage = function (props) {
 
     let languageInStorage = sessionStorage.getItem("language");
     let renderInStorage = JSON.parse(sessionStorage.getItem("firstRender"));
-    console.log("renderInStorage");
-    console.log(renderInStorage);
 
     if (renderInStorage === false) setFirstRender(renderInStorage);
-
-    console.log("firstRender");
-    console.log(firstRender);
 
     if (languageInStorage === "french") {
       setLanguage("french");
@@ -62,6 +57,7 @@ const IndexPage = function (props) {
       )
         .then((response) => response.json())
         .then((result) => (countryCode = result.country.iso_code))
+        .then((result) => console.log(countryCode))
         .then((result) => {
           if (countryCode === "FR") {
             proposeFR();
@@ -69,7 +65,7 @@ const IndexPage = function (props) {
         })
         .catch((error) => console.log("error", error));
     }
-  }, []);
+  }, [firstRender, setLanguage]);
 
   function acceptFR() {
     setPopUpFR(false);
