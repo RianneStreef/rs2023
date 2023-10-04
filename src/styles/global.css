@@ -184,6 +184,10 @@ a {
   text-align: center;
 }
 
+#cookie-consent button {
+  background-color: var(--color-highlight) !important;
+}
+
 @media (min-width: 1024px) {
   .main {
     padding: 0 150px;

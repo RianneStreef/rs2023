@@ -14,12 +14,45 @@ import Things from "../components/Things";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
+import ReactGA from "react-ga4";
+import CookieConsent, {
+  getCookieConsentValue,
+  Cookies,
+} from "react-cookie-consent";
+
 const IndexPage = function (props) {
   let { language, setLanguage } = props;
   let languageToUse = content.english;
 
   const [popUpFR, setPopUpFR] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
+
+  const initGA = (id) => {
+    // if (process.env.NODE_ENV === "production") {
+    console.log("InitGA");
+    ReactGA.initialize(id);
+    //}
+  };
+
+  const handleAcceptCookie = () => {
+    initGA("G-SF8YF645KY");
+  };
+
+  const handleDeclineCookie = () => {
+    Cookies.remove("_ga");
+    Cookies.remove("_gat");
+    Cookies.remove("_gid");
+  };
+
+  useEffect(() => {
+    const isConsent = getCookieConsentValue();
+    // if (isConsent) {
+    //   document.getElementById("cookieConsent").style.display = "none";
+    // }
+    if (isConsent === "true") {
+      handleAcceptCookie();
+    }
+  }, []);
 
   useEffect(() => {
     setLanguage("english");
@@ -97,6 +130,18 @@ const IndexPage = function (props) {
         <meta name="keywords" content={languageToUse.metaKeywords} />
         <link rel="canonical" href={intakeInfo.domainName} />
       </Helmet>
+      <CookieConsent
+        enableDeclineButton
+        onAccept={handleAcceptCookie}
+        onDecline={handleDeclineCookie}
+        buttonText={"I accept!"}
+        declineButtonText={"I decline.."}
+      >
+        <p className="cookie-text-header">WE VALUE YOUR PRIVACY!</p>
+        <p className="cookie-text">
+          This website uses cookies to evaluate our traffic.
+        </p>
+      </CookieConsent>
 
       {!firstRender ? (
         <div />

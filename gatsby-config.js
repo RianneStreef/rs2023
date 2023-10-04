@@ -7,17 +7,17 @@ module.exports = {
     siteUrl: `https://www.riannestreef.com`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ["G-SF8YF645KY"],
-        pluginConfig: {
-          head: true,
-        },
-        enableWebVitalsTracking: true,
-        respectDNT: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: ["G-SF8YF645KY"],
+    //     pluginConfig: {
+    //       head: true,
+    //     },
+    //     enableWebVitalsTracking: true,
+    //     respectDNT: true,
+    //   },
+    // },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
