@@ -22,10 +22,10 @@ const Payment = (props) => {
       </Helmet>
       <div className="header-placeholder" />
       Payment
-      <stripe-buy-button
+      {/* <stripe-buy-button
         buy-button-id="'{{BUY_BUTTON_ID}}'"
         publishable-key="pk_test_oKhSR5nslBRnBZpjO6KuzZeX"
-      ></stripe-buy-button>
+      ></stripe-buy-button> */}
     </div>
   );
 };
