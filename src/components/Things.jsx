@@ -9,7 +9,7 @@ import github from "../images/github.png";
 import link from "../images/link.png";
 
 const Things = (props) => {
-  let { language, languageToUse } = props;
+  let { languageToUse } = props;
 
   useEffect(() => {
     window.addEventListener("scroll", scrollImages);

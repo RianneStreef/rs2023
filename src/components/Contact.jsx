@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import "../styles/Contact.css";
 
 const Contact = (props) => {
-  let { language, languageToUse } = props;
+  let { languageToUse } = props;
 
   useEffect(() => {
     window.addEventListener("scroll", scrollImages);

@@ -5,7 +5,6 @@ import { content } from "../content/languages";
 import intakeInfo from "../content/intake";
 
 const Payment = (props) => {
-  let { language } = props;
   let languageToUse = content.english;
   return (
     <div>

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import "../styles/About.css";
 
 const About = (props) => {
-  let { language, languageToUse } = props;
+  let { languageToUse } = props;
 
   useEffect(() => {
     window.addEventListener("scroll", scrollImages);

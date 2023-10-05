@@ -44,17 +44,16 @@ const IndexPage = function (props) {
     Cookies.remove("_gid");
   };
 
+  // useEffect(() => {
+
+  // }, []);
+
   useEffect(() => {
     const isConsent = getCookieConsentValue();
-    // if (isConsent) {
-    //   document.getElementById("cookieConsent").style.display = "none";
-    // }
+
     if (isConsent === "true") {
       handleAcceptCookie();
     }
-  }, []);
-
-  useEffect(() => {
     setLanguage("english");
     let countryCode = "";
 

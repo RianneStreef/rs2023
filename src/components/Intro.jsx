@@ -5,7 +5,7 @@ import "../styles/Intro.css";
 import { Link } from "gatsby";
 
 const Intro = (props) => {
-  let { language, languageToUse } = props;
+  let { languageToUse } = props;
 
   useEffect(() => {
     let slideElement1 = document.getElementById("slide-element-1");
