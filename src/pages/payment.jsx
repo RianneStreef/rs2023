@@ -5,14 +5,16 @@ import { content } from "../content/languages";
 import intakeInfo from "../content/intake";
 
 const Payment = (props) => {
+  let { language, setLanguage } = props;
+
   let languageToUse = content.english;
   return (
     <div>
-      <Helmet>
-        htmlAttributes=
-        {{
+      <Helmet
+        htmlAttributes={{
           lang: "en",
         }}
+      >
         {/* <script async src="https://js.stripe.com/v3/buy-button.js"></script> */}
         <title>Rianne Streef || Web Developer</title>
         <meta name="robots" content="index, follow" />
