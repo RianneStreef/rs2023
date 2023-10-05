@@ -13,7 +13,7 @@ const Payment = (props) => {
         {{
           lang: "en",
         }}
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+        {/* <script async src="https://js.stripe.com/v3/buy-button.js"></script> */}
         <title>Rianne Streef || Web Developer</title>
         <meta name="robots" content="index, follow" />
         <meta name="description" content={languageToUse.metaDescription} />

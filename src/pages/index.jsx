@@ -44,10 +44,6 @@ const IndexPage = function (props) {
     Cookies.remove("_gid");
   };
 
-  // useEffect(() => {
-
-  // }, []);
-
   useEffect(() => {
     const isConsent = getCookieConsentValue();
 
