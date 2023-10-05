@@ -184,8 +184,37 @@ a {
   text-align: center;
 }
 
-#cookie-consent button {
+.cookies-image {
+  width: 20px;
+  margin: 0 10px;
+}
+
+.cookie-text-header {
+  font-size: 30px;
+  margin: 5px;
+}
+.cookie-text {
+  margin: 5px;
+}
+
+#rcc-decline-button {
+  background-color: var(--color-background) !important;
+  border: 2px solid var(--color-highlight) !important;
+}
+
+#rcc-confirm-button {
   background-color: var(--color-highlight) !important;
+  color: var(--color-background-light);
+}
+
+.CookieConsent {
+  background-color: var(--color-cards) !important;
+  /* border-top: 2px solid var(--color-highlight); */
+}
+
+.CookieConsent button {
+  font-family: "Roboto" !important;
+  /* border-radius: 10px !important; */
 }
 
 @media (min-width: 1024px) {

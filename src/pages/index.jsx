@@ -133,13 +133,11 @@ const IndexPage = function (props) {
         enableDeclineButton
         onAccept={handleAcceptCookie}
         onDecline={handleDeclineCookie}
-        buttonText={"I accept!"}
-        declineButtonText={"I decline.."}
+        buttonText={languageToUse.cookieAccept}
+        declineButtonText={languageToUse.cookieDecline}
       >
-        <p className="cookie-text-header">WE VALUE YOUR PRIVACY!</p>
-        <p className="cookie-text">
-          This website uses cookies to evaluate our traffic.
-        </p>
+        <p className="cookie-text-header">{languageToUse.cookieHeader}</p>
+        <p className="cookie-text">{languageToUse.cookieText}</p>
       </CookieConsent>
 
       {!firstRender ? (

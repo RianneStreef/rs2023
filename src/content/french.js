@@ -59,6 +59,11 @@ export const french = {
 
   thanks: "Merci pour votre message!",
 
+  cookieHeader: "Nous utilisons des cookies",
+  cookieText: "Ce site web utilise des cookies pour évaluer notre trafic.",
+  cookieAccept: "J'accepte !",
+  cookieDecline: "Je refuse..",
+
   copyright: "Créé par",
   logo: "Logo par ",
 
